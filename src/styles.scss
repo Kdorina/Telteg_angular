@@ -19,3 +19,15 @@ $theme-colors: (
 @import "~node_modules/bootstrap/scss/bootstrap";
 @import '~bootstrap';
 
+#halfarea{
+    border-radius: 20px; 
+    opacity: 0.5;
+}
+#area{
+    border-radius: 20px; 
+}
+
+.about{
+    background-color: rgba(184, 235, 174, 0.356);
+    border-radius: 5px;
+}

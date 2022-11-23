@@ -20,11 +20,15 @@ export class AppComponent {
   bSide!: number;
   area!: number;
   halfarea!: number;
-
+  showHalfaera!: any;
+  showAera!: any;
 
  calc():void{
   this.halfarea = this.aSide*this.bSide;
   this.area = this.halfarea*2;
-
+  this.showHalfaera = true;
+  this.showAera = true;
  }
+
+
 }

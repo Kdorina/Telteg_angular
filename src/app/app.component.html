@@ -8,28 +8,38 @@
 * Licenc: GNU GPL
 */ -->
 
-<div class="container">
-    <h3 class="title m-3">{{title}}</h3><hr>
-    <div class="areaCalc mb-3">
-        <label for="aSide" class="form-label" >A oldal</label>
-        <input type="text" id="aSide" class="form-control" [(ngModel)]="aSide">
-
-        <label for="bSide" class="form-label">B oldal</label>
-        <input type="text" class="form-control" [(ngModel)]="bSide" >
-
+<div class="card">
+    <div class="container">
+        <h5>0354 feladat</h5>
+        <h3 class="title m-3 text-center">{{title | uppercase}}</h3><hr>
+    
+        <div class="aSide mb-3">
+            <label for="aSide" class="form-label" >A oldal</label>
+            <input type="text" id="aSide" class="form-control" [(ngModel)]="aSide" required>
+        </div>
+    
+        <div class="bSide mb-3">
+            <label for="bSide" class="form-label">B oldal</label>
+            <input type="text" class="form-control" [(ngModel)]="bSide" required>
+        </div>
+    
         <div class="calcButton d-grid gap-2 mt-2">
             <button class="btn btn-success" (click)="calc()">Számít</button>
         </div>
+    
+        <div class="halfareaResult" *ngIf="showHalfaera">
+            <label for="halfarea" class=" form-label mt-4">Telek fele</label>
+            <input type="text" id="halfarea" class="form-control" [(ngModel)]="halfarea" disabled>
+        </div>
+    
+        <div class="areaResult" *ngIf="showAera">
+            <label for="area" class=" form-label mt-4">Telek teljes területe</label>
+            <input type="text" id="area" class="form-control"  style="border-radius: 20px; " [(ngModel)]="area" disabled>
+        </div>
 
-    <div class="halfarea mb-3">
-        <label for="halfarea" class="form-label mt-4">Telek fele</label>
-        <input type="text" id="halfarea" class="form-control" [(ngModel)]="halfarea" disabled>
-    </div>
-
-    <div class="area mb-3">
-        <label for="area" class="form-label mt-4">Telek teljes területe</label>
-        <input type="text" id="area" class="form-control" [(ngModel)]="area" disabled>
-    </div>
-
+        <div class="about mt-4 text-center" >
+          Kovács Dorina, 2022-11-23, SZOFT II/N
+        </div>
+    
     </div>
 </div>
