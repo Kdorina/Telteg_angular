@@ -8,5 +8,14 @@
 // * Github: https://github.com/Kdorina
 // * Licenc: GNU GPL
 // */
+$theme-colors: (
+  "success":    rgb(145, 231, 145),
+  "info":       rgb(64, 64, 207),
+  "warning":    rgb(255, 204, 110),
+  "danger":     rgb(214, 36, 108),
+ 
+);
 
-@import '~bootstrap'
+@import "~node_modules/bootstrap/scss/bootstrap";
+@import '~bootstrap';
+

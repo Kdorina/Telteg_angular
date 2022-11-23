@@ -7,3 +7,24 @@
 * Github: https://github.com/Kdorina
 * Licenc: GNU GPL
 */ -->
+
+<div class="container">
+    <h3 class="title m-3">{{title}}</h3><hr>
+    <div class="areaCalc mb-3">
+        <label for="aSide" class="form-label" >A oldal</label>
+        <input type="text" id="aSide" class="form-control" [(ngModel)]="aSide">
+
+        <label for="bSide" class="form-label">B oldal</label>
+        <input type="text" class="form-control" [(ngModel)]="aSide" >
+
+        <div class="calcButton d-grid gap-2 mt-2">
+            <button class="btn btn-success" (click)="calc()">Számít</button>
+        </div>
+
+    <div class="result mb-3">
+        <label for="area" class="form-label mt-4">Telek területe</label>
+        <input type="text" class="form-control" [(ngModel)]="area" disabled>
+    </div>
+
+    </div>
+</div>
