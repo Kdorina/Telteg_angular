@@ -16,4 +16,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Telek területszámítás';
+  aSide!: number;
+  bSide!: number;
+  area!: number;
+  halfarea!: number;
+
+
+ calc():void{
+  this.halfarea = this.aSide*this.bSide;
+  this.area = this.halfarea*2;
+
+ }
 }

@@ -15,15 +15,20 @@
         <input type="text" id="aSide" class="form-control" [(ngModel)]="aSide">
 
         <label for="bSide" class="form-label">B oldal</label>
-        <input type="text" class="form-control" [(ngModel)]="aSide" >
+        <input type="text" class="form-control" [(ngModel)]="bSide" >
 
         <div class="calcButton d-grid gap-2 mt-2">
             <button class="btn btn-success" (click)="calc()">Számít</button>
         </div>
 
-    <div class="result mb-3">
-        <label for="area" class="form-label mt-4">Telek területe</label>
-        <input type="text" class="form-control" [(ngModel)]="area" disabled>
+    <div class="halfarea mb-3">
+        <label for="halfarea" class="form-label mt-4">Telek fele</label>
+        <input type="text" id="halfarea" class="form-control" [(ngModel)]="halfarea" disabled>
+    </div>
+
+    <div class="area mb-3">
+        <label for="area" class="form-label mt-4">Telek teljes területe</label>
+        <input type="text" id="area" class="form-control" [(ngModel)]="area" disabled>
     </div>
 
     </div>
