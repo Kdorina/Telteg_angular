@@ -7,20 +7,26 @@
 * Github: https://github.com/Kdorina
 * Licenc: GNU GPL
 */ -->
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <div class="card">
     <div class="container">
-        <h5>0354 feladat</h5>
+      <button id="questionBtn" class=" btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="clickModal()">
+        <span class="material-symbols-outlined">
+          visibility
+          </span>
+      </button>
+        <h5>0354 Feladat</h5>
+
         <h3 class="title m-3 text-center">{{title | uppercase}}</h3><hr>
     
         <div class="aSide mb-3">
             <label for="aSide" class="form-label" >A oldal</label>
-            <input type="text" id="aSide" class="form-control" [(ngModel)]="aSide" required>
+            <input type="text" id="aSide" class="form-control" placeholder="Kérek egy értéket" [(ngModel)]="aSide" required>
         </div>
     
         <div class="bSide mb-3">
             <label for="bSide" class="form-label">B oldal</label>
-            <input type="text" class="form-control" [(ngModel)]="bSide" required>
+            <input type="text" class="form-control" placeholder="Kérek egy értéket"  [(ngModel)]="bSide" required>
         </div>
     
         <div class="calcButton d-grid gap-2 mt-2">
@@ -37,9 +43,32 @@
             <input type="text" id="area" class="form-control"  style="border-radius: 20px; " [(ngModel)]="area" disabled>
         </div>
 
-        <div class="about mt-4 text-center" >
+        <div class="about mt-4 text-center" *ngIf="about">
           Kovács Dorina, 2022-11-23, SZOFT II/N
         </div>
     
     </div>
 </div>
+
+    <!-- Modal -->
+    <div class="modal" #content id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" 
+    aria-hidden="true" *ngIf="showModal">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Kiszámítandó terület</h1>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeBtn()"></button>
+
+        </div>
+        <div class="modal-body">
+          <img src="{{path}}" alt="{{alttext}}">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal" (click)="closeBtn()">Bezár</button>
+        </div>
+      </div>
+    </div>
+  </div>
