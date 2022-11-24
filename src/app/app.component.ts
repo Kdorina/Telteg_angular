@@ -49,23 +49,11 @@ export class AppComponent implements OnInit{
   this.showHalfaera = true;
   this.showAera = true;
   this.about = true;
+
  };
 
  ngOnInit(): void {
-    // this.formModal = new window.bootstrap.Modal(
-    //   document.getElementById('myModal')
-    
+
   }
   
-
-//  openModal(){
-//     // // this.formModal.show();
-//     // this.formModal = true;
-//     this.modal = true;
-   
-//   }
-//   close(){
-//     // this.formModal.hide();
-//     this.modal = true;
-//   }
 }
